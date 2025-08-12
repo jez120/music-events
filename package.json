@@ -4,13 +4,15 @@
   "version": "0.1.0",
   "packageManager": "pnpm@8.15.8",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "build": "pnpm -r build",
     "lint": "pnpm -r lint",
     "fmt": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev:web": "pnpm --filter web dev"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
